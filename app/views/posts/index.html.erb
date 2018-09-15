@@ -4,12 +4,14 @@
 
 <% @posts.each do |post| %>
   <h2><%= link_to post.title, post %></h2>
+  <p align="right"><%= time_ago_in_words(post.created_at) %> ago</p>
+  <hr>
 <% end %>
 
 <br>
 
 <% if user_signed_in? %>
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'New Post', new_post_path, class: 'btn btn-success'  %>
 <% else %>
 <%= link_to 'Admin Login', new_user_session_path %>
 <% end %>
