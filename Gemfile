@@ -34,6 +34,8 @@ gem 'devise'
 
 gem 'social-share-button'
 
+gem 'jquery-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
